@@ -1,0 +1,14 @@
+# Generated data
+data/
+*.parquet
+_SUCCESS
+
+# Spark / Python
+spark-warehouse/
+metastore_db/
+derby.log
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
