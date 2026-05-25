@@ -6,6 +6,13 @@ on:
   pull_request:
     branches: [main]
 
+# Opt JavaScript actions into Node.js 24 ahead of GitHub's June 2026
+# forced upgrade. actions/checkout@v4, setup-java@v4, setup-python@v5
+# are the latest majors and don't yet publish a Node-24-native release;
+# this env var is GitHub's official opt-in path until they do.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
